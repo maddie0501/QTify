@@ -1,12 +1,17 @@
-//import './App.css';
+import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx';
+import Hero from './components/Hero/Hero.jsx';
+import Card from './components/Card/Card.jsx';
+import Cardlist from './components/Card/Cardlist.jsx';
 
 function App() {
   return (
-    <>
-    <h1>QTIFY</h1>
-      <Navbar />
-    </>
+    <div>
+    <Navbar />
+    <Hero />
+    <Cardlist />
+    
+    </div>
   );
 }
 

@@ -18,9 +18,9 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <Logo />
+      <Link to = "/"><Logo /> </Link>
 
-      <Search placeholder="Search..." onChange={handleSearchChange} />
+      <Search placeholder="Search a song of your choice" onChange={handleSearchChange} />
 
       <Button onClick={handleButtonClick}>Give Feedback</Button>
     </nav>

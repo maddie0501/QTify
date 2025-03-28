@@ -11,8 +11,8 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import { Navigation } from "swiper/modules"; 
-
+import { Navigation } from "swiper/modules";
+import { fontFamily, fontWeight } from "@mui/system";
 
 const Cardlist = () => {
   const [topAlbums, setTopAlbums] = useState([]);
@@ -88,14 +88,11 @@ const Cardlist = () => {
 
   const renderSwiper = (albumData) => (
     <Swiper
+      style={{ paddingBottom: "20px" }}
       spaceBetween={5}
       slidesPerView={2}
-      
-      navigation={true} 
+      navigation={true}
       modules={[Navigation]}
-      
-      
-      
       breakpoints={{
         640: { slidesPerView: 3 },
         768: { slidesPerView: 4 },
@@ -129,15 +126,20 @@ const Cardlist = () => {
           alignItems: "center",
         }}
       >
-        <p style={{ color: "white",
-          fontFamily: "Poppins",
-          fontWeight: "600",
-          fontSize: "20px",
-          lineHeight: "100%",
-          letterSpacing: "0px",
-        }}>Top Albums</p>
+        <p
+          style={{
+            color: "white",
+            fontFamily: "Poppins",
+            fontWeight: "600",
+            fontSize: "20px",
+            lineHeight: "100%",
+            letterSpacing: "0px",
+          }}
+        >
+          Top Albums
+        </p>
         <Button
-        style={{ color: " rgba(52, 201, 75, 1)"}}
+          style={{ color: " rgba(52, 201, 75, 1)" }}
           onClick={() => setIsTopCollapsed(!isTopCollapsed)}
         >
           {!isTopCollapsed ? "Show All" : "Collapse"}
@@ -153,16 +155,20 @@ const Cardlist = () => {
           marginTop: "20px",
         }}
       >
-        <p style={{ color: "white", 
-          fontFamily: "Poppins",
-          fontWeight: "600",
-          fontSize: "20px",
-          lineHeight: "100%",
-          letterSpacing: "0px",
-          
-        }}>New Albums</p>
+        <p
+          style={{
+            color: "white",
+            fontFamily: "Poppins",
+            fontWeight: "600",
+            fontSize: "20px",
+            lineHeight: "100%",
+            letterSpacing: "0px",
+          }}
+        >
+          New Albums
+        </p>
         <Button
-          style={{ color: " rgba(52, 201, 75, 1)"}}
+          style={{ color: " rgba(52, 201, 75, 1)" }}
           onClick={() => setIsNewCollapsed(!isNewCollapsed)}
         >
           {!isNewCollapsed ? "Show All" : "Collapse"}
@@ -170,31 +176,44 @@ const Cardlist = () => {
       </div>
       {!isNewCollapsed ? renderSwiper(newAlbums) : renderGrid(newAlbums)}
 
-      <div style ={{borderBlock :"1px solid rgba(52, 201, 75, 1)"}} >
-        <p style={{ color: "white", textAlign: "left" ,
-    
-    position: "relative",
-    paddingTop: "10px"}}>Songs</p>
-        <Box sx={{ width: "100%", typography: "body1",  }}>
+      <div style={{ borderBlock: "1px solid rgba(52, 201, 75, 1)" }}>
+        <p
+          style={{
+            color: "white",
+            textAlign: "left",
+            
+            paddingTop: "1px",
+            fontFamily: "Poppins",
+            fontWeight: "600",
+            fontSize: "20px",
+            lineHeight: "100%",
+            letterSpacing: "0px",
+          
+          }}
+        >
+          Songs
+        </p>
+        <Box sx={{ width: "100%", typography: "body1" }}>
           <TabContext value={selectedGenre}>
             <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
               <TabList
                 onChange={(event, newValue) => setSelectedGenre(newValue)}
                 aria-label="Genre Tabs"
-                
                 sx={{
                   "& .MuiTab-root": {
                     color: "white",
                     textTransform: "none",
                     fontWeight: "normal",
-                    outline:"none",
-                  }, 
+                    outline: "none",
+                  },
                   "& .Mui-selected": {
-                    color: "white", 
+                    color: "white",
                     fontWeight: "bold",
                   },
-                  "& .MuiTabs-indicator": { backgroundColor: "rgba(52, 201, 75, 1)" }, 
-                  "& .MuiTouchRipple-root": { display: "none" }, 
+                  "& .MuiTabs-indicator": {
+                    backgroundColor: "rgba(52, 201, 75, 1)",
+                  },
+                  "& .MuiTouchRipple-root": { display: "none" },
                 }}
               >
                 {genres.map((genre) => (
@@ -215,7 +234,6 @@ const Cardlist = () => {
           </TabContext>
         </Box>
       </div>
-      
     </div>
   );
 };

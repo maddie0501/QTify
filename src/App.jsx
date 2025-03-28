@@ -1,8 +1,8 @@
 import './App.css';
 import Navbar from './components/Navbar/Navbar.jsx';
 import Hero from './components/Hero/Hero.jsx';
-import Card from './components/Card/Card.jsx';
 import Cardlist from './components/Card/Cardlist.jsx';
+import Faqs from './components/FAQs/Faqs.jsx';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
     <Navbar />
     <Hero />
     <Cardlist />
-    
+    <Faqs />
     </div>
   );
 }

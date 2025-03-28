@@ -4,6 +4,8 @@ import Button from "../Button/Button";
 import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
 import Search from "../Search/Search";
+import BasicModal from '../Button/Feedbackform';
+import { useState } from "react";
 
 const Navbar = () => {
   const handleSearchChange = (event) => {
@@ -11,10 +13,12 @@ const Navbar = () => {
     console.log("Search", event.target.value);
   };
 
-  const handleButtonClick = () => {
+  // const handleButtonClick = () => {
     
-    console.log("Button");
-  };
+  //   console.log("Button");
+    
+  // };
+  const [open, setOpen] = useState(false);
 
   return (
     <nav className={styles.navbar}>
@@ -22,7 +26,11 @@ const Navbar = () => {
 
       <Search placeholder="Search a song of your choice" onChange={handleSearchChange} />
 
-      <Button onClick={handleButtonClick}>Give Feedback</Button>
+
+      <Button onClick={() => setOpen(true)}>Give Feedback</Button>
+      
+
+      <BasicModal open={open} onClose={() => setOpen(false)} />
     </nav>
   );
 };

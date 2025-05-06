@@ -25,7 +25,7 @@ const AlbumCard = ({ product }) => {
             style={{ objectFit: "cover" }}
           />
 
-          <Stack direction="row" spacing={1} sx={{ marginTop: "8px" }}>
+          <Stack direction="row" spacing={1} sx={{ marginTop: "3px", justifyContent: "center"}}>
             <Chip
               className={styles.chips}
               label={
@@ -33,7 +33,7 @@ const AlbumCard = ({ product }) => {
                   ? `${product.follows} Follows`
                   : `${product.likes} Likes`
               }
-              sx={{ backgroundColor: "black", color: "white" }}
+              sx={{ backgroundColor: "black", color: "white"}}
             />
           </Stack>
         </CardContent>

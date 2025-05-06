@@ -12,7 +12,6 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import { Navigation } from "swiper/modules";
-import { fontFamily, fontWeight } from "@mui/system";
 
 const Cardlist = () => {
   const [topAlbums, setTopAlbums] = useState([]);
@@ -88,7 +87,7 @@ const Cardlist = () => {
 
   const renderSwiper = (albumData) => (
     <Swiper
-      style={{ paddingBottom: "20px" }}
+      style={{ paddingBottom: "20px"}}
       spaceBetween={5}
       slidesPerView={2}
       navigation={true}
@@ -134,12 +133,13 @@ const Cardlist = () => {
             fontSize: "20px",
             lineHeight: "100%",
             letterSpacing: "0px",
+            margin:"20px"
           }}
         >
           Top Albums
         </p>
         <Button
-          style={{ color: " rgba(52, 201, 75, 1)" }}
+          style={{ color: " rgba(52, 201, 75, 1)" ,margin:"20px"}}
           onClick={() => setIsTopCollapsed(!isTopCollapsed)}
         >
           {!isTopCollapsed ? "Show All" : "Collapse"}
@@ -163,12 +163,13 @@ const Cardlist = () => {
             fontSize: "20px",
             lineHeight: "100%",
             letterSpacing: "0px",
+            margin:"20px"
           }}
         >
           New Albums
         </p>
         <Button
-          style={{ color: " rgba(52, 201, 75, 1)" }}
+          style={{ color: " rgba(52, 201, 75, 1)" ,margin:"20px"}}
           onClick={() => setIsNewCollapsed(!isNewCollapsed)}
         >
           {!isNewCollapsed ? "Show All" : "Collapse"}
@@ -188,6 +189,7 @@ const Cardlist = () => {
             fontSize: "20px",
             lineHeight: "100%",
             letterSpacing: "0px",
+            margin:"20px"
           
           }}
         >

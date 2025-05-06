@@ -1,13 +1,14 @@
 .card {
-  width: 159px;
-  height: 205px;
+  width: 179px;
+  height: 210px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
   
 }
 
 .cardimg {
-  width: 159px;
+  width: 179px;
   height: 170px;
   padding: 0;
 }
@@ -21,6 +22,6 @@
   padding-block: 4px;
   white-space: no-wrap;
   margin-left: 4px;
-  display: block;
 }
+
 
